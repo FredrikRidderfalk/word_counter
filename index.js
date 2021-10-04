@@ -3,7 +3,7 @@
 // - write the JS so that the word count appears on the screen
 // - update the count as the user types
 
-const userInput = document.querySelector(".user-input");
+const userInput = document.querySelector("[name='user-input']");
 const wordCounter = document.querySelector(".word-counter");
 const characterCounter = document.querySelector(".character-counter");
 const longestWord = document.querySelector(".longest-word");
@@ -14,11 +14,11 @@ const wordCount = (str) => {
   return str.split(" ").length;
 };
 
-console.log(wordCount("hello world"));
+console.log(wordCount(userInput.value));
 
 const displayWordCount = () => {
   wordCounter.textContent = wordCount(
-    "but everything changed when the firenation attacked"
+    "everything changed when the firenation attacked"
   );
 };
 
