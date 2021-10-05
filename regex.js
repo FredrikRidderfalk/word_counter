@@ -50,9 +50,7 @@ function findLongestWord(str) {
 
 // paragraph detector
 const sentenceCount = (str) => {
-  if (userInput.value != "") {
-    return str.match(/([.?!])\s*(?=[A-Z])/g).length;
-  }
+  return str.match(/([.?!])\s*(?=[A-Z])/g).length + 1;
 };
 
 // event listener for all components
