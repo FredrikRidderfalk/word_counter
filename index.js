@@ -14,14 +14,15 @@ const wordCount = (str) => {
   return str.split(" ").length;
 };
 
-console.log(wordCount(userInput.value));
-
-const displayWordCount = () => {
-  wordCounter.textContent = wordCount(
-    "everything changed when the firenation attacked"
-  );
-};
-
-displayWordCount();
+userInput.addEventListener("keyup", () => {
+  wordCounter.textContent = wordCount(userInput.value);
+});
 
 // character counter
+const characterCount = (str) => {
+  return str.length;
+};
+
+userInput.addEventListener("keyup", () => {
+  characterCounter.textContent = wordCount(userInput.value);
+});

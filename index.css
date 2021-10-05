@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Caveat", cursive;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-dark: hsl(0, 0%, 19%);
+  --clr-accent: hsl(102, 53%, 77%);
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+
+  /* line-height: 1.6; is generally a good value */
+  line-height: 1.6;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 1em 2.5em;
+  cursor: pointer;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  letter-spacing: 2px;
+  transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.075);
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  /* In case headings break onto a second line */
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+/* general styling */
+
+main {
+  background-color: aliceblue;
+}
+
+form {
+  padding: 20px;
+  width: 100%;
+}
+
+.container {
+  border: 1px solid magenta;
+  display: flex;
+  flex-direction: column;
+}
