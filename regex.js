@@ -1,7 +1,6 @@
 const userInput = document.querySelector("[name='user-input']");
 const wordCounter = document.querySelector(".word-counter");
 const characterCounter = document.querySelector(".character-counter");
-const sentenceCounter = document.querySelector(".sentence-counter");
 const longestWordCount = document.querySelector(".longest-word-count");
 const longestWordIdentifyer = document.querySelector(
   ".longest-word-identifyer"
@@ -48,11 +47,6 @@ function findLongestWord(str) {
   }
 }
 
-// paragraph detector
-const sentenceCount = (str) => {
-  return str.match(/([.?!])\s*(?=[A-Z])/g).length + 1;
-};
-
 // event listener for all components
 
 userInput.addEventListener("keyup", () => {
@@ -60,5 +54,4 @@ userInput.addEventListener("keyup", () => {
   characterCounter.textContent = characterCount(userInput.value);
   longestWordCount.textContent = countLongestWord(userInput.value);
   longestWordIdentifyer.textContent = findLongestWord(userInput.value);
-  sentenceCounter.textContent = sentenceCount(userInput.value);
 });

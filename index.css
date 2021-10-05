@@ -5,7 +5,7 @@
 }
 
 :root {
-  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-primary: monospace, sans-serif;
   --ff-secondary: "Caveat", cursive;
 
   --fw-reg: 300;
@@ -13,10 +13,10 @@
 
   --clr-light: hsl(0, 0%, 100%);
   --clr-dark: hsl(0, 0%, 19%);
-  --clr-accent: hsl(102, 53%, 77%);
+  --clr-accent: hsl(277, 100%, 91%);
 
   --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
+  --fs-h2: 1.75rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
@@ -87,16 +87,47 @@ h3 {
 /* general styling */
 
 main {
-  background-color: aliceblue;
+  margin: 0 auto;
+  display: flex;
+  max-width: 100%;
+  padding: 1em;
+  background: linear-gradient(
+    325deg,
+    rgba(249, 193, 255, 1) 0%,
+    rgba(213, 183, 255, 1) 100%
+  );
+  align-items: center;
 }
 
-form {
+textarea {
   padding: 20px;
-  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  min-height: 30vh;
+  max-width: 100%;
+  align-items: center;
+  max-width: 50%;
+}
+
+.main-title {
+  padding: 10px;
+  text-align: right;
 }
 
 .container {
-  border: 1px solid magenta;
-  display: flex;
-  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  background: linear-gradient(
+    325deg,
+    rgba(4, 4, 4, 1) 0%,
+    rgba(84, 79, 91, 1) 100%
+  );
+  color: var(--clr-light);
+  border-radius: 5px;
+  box-shadow: var(--bs);
+  min-height: 160px;
 }

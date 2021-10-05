@@ -9,6 +9,7 @@
   </head>
   <body>
     <main>
+      <h2 class="main-title">Word Counter</h2>
       <form action="/action_page.php">
         <textarea
           name="user-input"
@@ -17,23 +18,21 @@
           placeholder="Type your text here..."
         ></textarea>
       </form>
-      <div class="container">
-        <h2>Word count:</h2>
-        <p class="word-counter"></p>
-      </div>
-      <div class="container">
-        <h2>Character count:</h2>
-        <p class="character-counter"></p>
-      </div>
-      <div class="container">
-        <h2>Longest word:</h2>
-        <p class="longest-word-count"></p>
-        <p class="longest-word-identifyer"></p>
-      </div>
-      <div class="container">
-        <h2>Sentences:</h2>
-        <p class="sentence-counter"></p>
-      </div>
+      <nav>
+        <div class="container">
+          <h3>Word count:</h3>
+          <p class="word-counter"></p>
+        </div>
+        <div class="container">
+          <h3>Character count:</h3>
+          <p class="character-counter"></p>
+        </div>
+        <div class="container">
+          <h3>Longest word:</h3>
+          <p class="longest-word-count"></p>
+          <p class="longest-word-identifyer"></p>
+        </div>
+      </nav>
     </main>
     <script src="regex.js"></script>
   </body>
