@@ -4,40 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <title>Word Counter</title>
   </head>
   <body>
-    <main>
-      <h2 class="main-title">Word Counter</h2>
-      <div>
-        <textarea
-          name="user-input"
-          rows="10"
-          cols="30"
-          placeholder="Type your text here..."
-        ></textarea>
-        <span class="bottom"></span>
-        <span class="right"></span>
-        <span class="top"></span>
-        <span class="left"></span>
+    <h1 class="main-title">Word Counter</h1>
+    <div class="textarea__container">
+      <textarea
+        name="user-input"
+        rows="10"
+        cols="30"
+        placeholder="Type your text here..."
+      ></textarea>
+      <span class="bottom"></span>
+      <span class="right"></span>
+      <span class="top"></span>
+      <span class="left"></span>
+    </div>
+    <div>
+      <div class="container">
+        <h2>Word count:</h2>
+        <p class="word-counter"></p>
       </div>
-      <nav>
-        <div class="container">
-          <h3>Word count:</h3>
-          <p class="word-counter"></p>
-        </div>
-        <div class="container">
-          <h3>Character count:</h3>
-          <p class="character-counter"></p>
-        </div>
-        <div class="container">
-          <h3>Longest word:</h3>
-          <p class="longest-word-count"></p>
-          <p class="longest-word-identifyer"></p>
-        </div>
-      </nav>
-    </main>
+      <div class="container">
+        <h2>Character count:</h2>
+        <p class="character-counter"></p>
+      </div>
+      <div class="container">
+        <h2>Longest word:</h2>
+        <p class="longest-word-count"></p>
+        <p class="longest-word-identifyer"></p>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
